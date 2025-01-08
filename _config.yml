@@ -9,4 +9,4 @@ twitter_username:
 github_username:
 
 # Build settings
-markdown: kramdown
+markdown: kramdown 
