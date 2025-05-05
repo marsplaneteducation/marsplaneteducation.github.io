@@ -129,15 +129,20 @@
 				enter: function () {
 					// Activate section.
 					$section.removeClass('inactive');
-
-					// No locked links? Deactivate all links and activate this section's one.
+				
+					// Prevent premature highlight during scroll
 					if ($nav_a.filter('.active-locked').length === 0) {
 						$nav_a.removeClass('active');
 						$this.addClass('active');
-					} else if ($this.hasClass('active-locked')) {
-						$this.removeClass('active-locked');
+					}
+					else if ($this.hasClass('active-locked')) {
+						// Delay unlocking to avoid flash
+						setTimeout(() => {
+							$this.removeClass('active-locked');
+						}, 400); // adjust time to match your scroll duration
 					}
 				}
+				
 			});
 		});
 
