@@ -151,6 +151,21 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
+#typewriter {
+	color: white; /* makes the typed text white */
+  }
+  
+  #typewriter::after {
+	content: '|';
+	color: white; /* makes the blinking cursor white */
+	animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0; }
+  }
+
 .blur-box {
 	background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark layer */
 	backdrop-filter: blur(10px);   /* Blur effect */

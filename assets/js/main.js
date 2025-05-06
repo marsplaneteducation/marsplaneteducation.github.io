@@ -5,6 +5,100 @@
 */
 
 (function ($) {
+	// Resetting the scroll position to the top of the page when the page is loaded
+	document.getElementById("top-link").addEventListener("click", function (e) {
+		// Smooth scroll still happens via .scrolly class
+		setTimeout(() => {
+			// Remove 'active' class from all nav links
+			document.querySelectorAll('.nav-link.active, .scrolly.active').forEach(el => {
+				el.classList.remove('active');
+			});
+		}, 800); // Wait until scroll completes
+	});
+
+	// Typewriter effect for the phrases
+	// This function will create a typewriter effect for the phrases in the array
+	const phrases = [
+		"OSCP+ Certified",
+		"Penetration Tester",
+		"Application Security Tester",
+		"Adversrary Emulation",
+		"Red Teaming",
+		"Vulnerability Management"
+	];
+
+	const element = document.getElementById("typewriter");
+	const typingSpeed = 100;
+	const erasingSpeed = 50;
+	const delayBetween = 1500;
+	let charIndex = 0;
+	let isDeleting = false;
+	let sentenceIndex = 0;
+	let shuffledPhrases = [];
+	let lastIndex = -1;
+
+	function shuffleArray(array) {
+		let a = [...array];
+		for (let i = a.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[a[i], a[j]] = [a[j], a[i]];
+		}
+		return a;
+	}
+
+	function getNextPhrase() {
+		if (shuffledPhrases.length === 0 || sentenceIndex >= shuffledPhrases.length) {
+			shuffledPhrases = shuffleArray(phrases);
+
+			// Make sure the first item isn’t the same as the last
+			if (shuffledPhrases[0] === phrases[lastIndex]) {
+				// swap first and second if they match
+				if (shuffledPhrases.length > 1) {
+					[shuffledPhrases[0], shuffledPhrases[1]] = [shuffledPhrases[1], shuffledPhrases[0]];
+				}
+			}
+
+			sentenceIndex = 0;
+		}
+
+		const current = shuffledPhrases[sentenceIndex];
+		lastIndex = phrases.indexOf(current);
+		return current;
+	}
+
+	function typeLoop() {
+		const currentSentence = getNextPhrase();
+
+		if (isDeleting) {
+			charIndex--;
+			element.textContent = currentSentence.substring(0, charIndex);
+			if (charIndex === 0) {
+				isDeleting = false;
+				sentenceIndex++;
+				setTimeout(typeLoop, typingSpeed);
+			} else {
+				setTimeout(typeLoop, erasingSpeed);
+			}
+		} else {
+			charIndex++;
+			element.textContent = currentSentence.substring(0, charIndex);
+			if (charIndex === currentSentence.length) {
+				isDeleting = true;
+				setTimeout(typeLoop, delayBetween);
+			} else {
+				setTimeout(typeLoop, typingSpeed);
+			}
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		shuffledPhrases = shuffleArray(phrases);
+		if (shuffledPhrases.length > 1 && shuffledPhrases[0] === shuffledPhrases[1]) {
+			[shuffledPhrases[0], shuffledPhrases[1]] = [shuffledPhrases[1], shuffledPhrases[0]];
+		}
+		lastIndex = phrases.indexOf(shuffledPhrases[0]);
+		setTimeout(typeLoop, 1000);
+	});
 
 	var $window = $(window),
 		$body = $('body'),
@@ -129,7 +223,7 @@
 				enter: function () {
 					// Activate section.
 					$section.removeClass('inactive');
-				
+
 					// Prevent premature highlight during scroll
 					if ($nav_a.filter('.active-locked').length === 0) {
 						$nav_a.removeClass('active');
@@ -142,7 +236,7 @@
 						}, 400); // adjust time to match your scroll duration
 					}
 				}
-				
+
 			});
 		});
 
