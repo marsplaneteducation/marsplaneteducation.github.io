@@ -48,6 +48,7 @@
 				<h1 id="title">Connect Wtih Me</h1>
 				<li><a href="https://github.com/aelder202" target="_blank" class="icon brands"><i
 							class="fab fa-github"></i></a></li>
+				<li><a href="https://app.hackthebox.com/profile/2048041" class="icon brands"><i class="fas fa-cube"></i></a>
 				<li><a href="https://www.linkedin.com/in/taylor-elder/" target="_blank" class="icon brands"><i
 							class="fab fa-linkedin"></i></a></li>
 				<li><a href="mailto:contact@taylorelder.com" class="icon brands"><i class="far fa-envelope"></i></a>
@@ -184,208 +185,209 @@
 		</section>
 
 		<!-- Projects -->
-<section id="projects" class="four">
-	<div class="container">
-	  <h2>Projects</h2>
-  
-	  <div class="carousel-container">
-		<div class="carousel-slide active">
-		  <article class="item">
-			<div class="project-content">
-			  <h3>E-Guard Keylogger Detector</h3>
-			  <div class="image-wrapper">
-			  	<img src="images/gui_threat.png">
+		<section id="projects" class="four">
+			<div class="container">
+				<h2>Projects</h2>
+
+				<div class="carousel-container">
+					<div class="carousel-slide active">
+						<article class="item">
+							<div class="project-content">
+								<h3>E-Guard Keylogger Detector</h3>
+								<div class="image-wrapper">
+									<img src="images/gui_threat.png">
+								</div>
+								<button class="open-modal-btn" data-modal="modal-eguard">Learn More</button>
+							</div>
+						</article>
+					</div>
+
+					<div class="carousel-slide">
+						<article class="item">
+							<div class="project-content">
+								<h3>Virtual Labs</h3>
+								<div class="image-wrapper">
+									<img src="images/sphinx_project.png">
+								</div>
+								<button class="open-modal-btn" data-modal="modal-virtual-labs">Learn More</button>
+							</div>
+						</article>
+					</div>
+
+					<div class="carousel-slide">
+						<article class="item">
+							<div class="project-content">
+								<h3 style="text-align: center;">Secure Python Scripting</h3>
+								<div class="image-wrapper">
+									<img src="images/python_scripting.png">
+								</div>
+								<button class="open-modal-btn" data-modal="modal-secure-python">Learn More</button>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<div class="carousel-controls">
+					<button id="prevSlide">←</button>
+					<span id="slideIndicator">1 / 3</span>
+					<button id="nextSlide">→</button>
+				</div>
 			</div>
-			  <button class="open-modal-btn" data-modal="modal-eguard">Learn More</button>
+		</section>
+
+		<!-- Modal for E-Guard -->
+		<div class="modal modal_multi" id="modal-eguard">
+			<div class="modal-content">
+				<span class="close close_multi">&times;</span>
+				<h2 style="text-align: center;">E-Guard Keylogger Detector</h2>
+				<p style="text-align: left; font-size: 15px; font-weight: bold;">
+					E-Guard Keylogger Detector combats keylogging software by monitoring all running
+					applications, targeting those attempting to communicate
+					through popular SMTP ports for Gmail, Yahoo, ATT, Microsoft, and AOL for both
+					Windows and Linux machines. This software will run
+					uninterrupted in the background while the device runs so that workflow can
+					proceed as normal. Once the software has targeted an application
+					that is communicating through specific SMTP ports, the process will be paused,
+					and the user will be notified of the potential threat.
+					Then, the user will be asked if this process should be added to a trusted
+					whitelist to continue running as normal or kill the process
+					immediately and be added to a blacklist so that any other time this process is
+					running it will be automatically terminated.
+				</p>
+				<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+					<button onclick="window.open('https://github.com/aelder202/E-Guard','_blank')">View on
+						GitHub</button>
+				</div>
 			</div>
-		  </article>
 		</div>
-  
-		<div class="carousel-slide">
-		  <article class="item">
-			<div class="project-content">
-			  <h3>Virtual Labs</h3>
-			  <div class="image-wrapper">
-			  <img src="images/sphinx_project.png">
+
+		<!-- Modal for Virtual Labs -->
+		<div class="modal modal_multi" id="modal-virtual-labs">
+			<div class="modal-content">
+				<span class="close close_multi">&times;</span>
+				<h2 style="text-align: center;">Virtual Labs</h2>
+				<p style="text-align: left; font-size: 15px; font-weight: bold;">
+					I began by completing and refining lab documents on various cybersecurity
+					topics,
+					including data anonymization, virtual switches and bridges, network
+					virtualization
+					with Open vSwitch and Linux Bridge, OpenFlow software, SDN controllers, Overlay
+					Network protocols,
+					Network Intrusion Detection Systems, system and network vulnerabilities (using
+					Nmap), TCP/IP security,
+					firewall configurations, and VPN basics.
+					<br>
+					After several weeks of debugging, I partnered with another Research Assistant to
+					rebuild these documents
+					using Sphinx. We converted .docx files to reStructuredText, using bash scripts
+					for efficiency. This
+					transformation provided a cohesive format with improved graphics and syntax.
+					<br>
+					Following the project's completion and peer review, we helped teach and present
+					these lab documents to students
+					during a week-long workshop. Acting as Teaching Assistants to the leading
+					professor, we supported participants
+					with understanding and applying the material.
+				</p>
+				<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+					<button onclick="window.open('https://taylorelder.com/sphinx_project/','_blank')" type="button">
+						<i class="fas fa-eye fa-fw"></i> View Project
+					</button>
+					<button onclick="window.open('https://github.com/aelder202/sphinx_project','_blank')" type="button">
+						<i class="fab fa-github fa-fw"></i> View on GitHub
+					</button>
+					<button class="open-modal-btn" data-modal="modal-sources">
+						<i class="far fa-file-code"></i> Source Files
+					</button>
+					<button class="open-modal-btn" data-modal="modal-credit">
+						<i class="fas fa-user-friends"></i> Credit
+					</button>
+				</div>
 			</div>
-			  <button class="open-modal-btn" data-modal="modal-virtual-labs">Learn More</button>
-			</div>
-		  </article>
 		</div>
-  
-		<div class="carousel-slide">
-		  <article class="item">
-			<div class="project-content">
-			  <h3 style="text-align: center;">Secure Python Scripting</h3>
-			  <div class="image-wrapper">
-			  <img src="images/python_scripting.png">
+
+		<!-- Modal for Secure Python Scripting -->
+		<div class="modal modal_multi" id="modal-secure-python">
+			<div class="modal-content">
+				<span class="close close_multi">&times;</span>
+				<h2 style="text-align: center;">Secure Python Scripting</h2>
+				<h3 style="text-align: left;">Description</h3>
+				<p style="text-align: left; font-size: 15px; font-weight: bold;">
+					The materials in this project were originally developed by Catalyzing Computing
+					and Cybersecurity in
+					Community Colleges (C5) project and contained PowerPoint presentations with
+					corresponding lab documents
+					that instructs beginner programmers how to write secure code and robust Python
+					code.
+					<br>
+					This project was created originally using Python 2 and specifically for Linux.
+					I, along with two other Research Assistants
+					were tasked with updating the PowerPoints, lab documents, and solutions to
+					Python 3 as well as creating both
+					Linux and Windows friendly versions.
+					<br>
+					Once our task was completed and our work had been peer reviewed, our updated
+					project was presented to a group of students,
+					with no prior coding experience, attending a university in California for a week
+					long workshop to get a peek inside the world of coding
+					and cyber security. Myself and the two other Research Assistants participated as
+					Teaching Assistants in this event, helping
+					students one on one and as a group to ensure if somebody was behind and needed
+					help or a further explanation of the lecture.
+				</p>
+				<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+					<button onclick="window.open('https://github.com/nexus-lab/secure_scripting_python','_blank')"
+						type="button">
+						<i class="fab fa-github fa-fw"></i> View on GitHub
+					</button>
+					<button class="open-modal-btn" data-modal="modal-secure-source">
+						<i class="far fa-file-code"></i> Source Files
+					</button>
+					<button class="open-modal-btn" data-modal="modal-secure-credit">
+						<i class="fas fa-user-friends"></i> Credit
+					</button>
+				</div>
 			</div>
-			  <button class="open-modal-btn" data-modal="modal-secure-python">Learn More</button>
-			</div>
-		  </article>
 		</div>
-	  </div>
-  
-	  <div class="carousel-controls">
-		<button id="prevSlide">←</button>
-		<span id="slideIndicator">1 / 3</span>
-		<button id="nextSlide">→</button>
-	  </div>
-	</div>
-  </section>
-  
-  <!-- Modal for E-Guard -->
-  <div class="modal modal_multi" id="modal-eguard">
-	<div class="modal-content">
-	  <span class="close close_multi">&times;</span>
-	  <h2 style="text-align: center;">E-Guard Keylogger Detector</h2>
-	  <p style="text-align: left; font-size: 15px; font-weight: bold;">
-		E-Guard Keylogger Detector combats keylogging software by monitoring all running
-		applications, targeting those attempting to communicate
-		through popular SMTP ports for Gmail, Yahoo, ATT, Microsoft, and AOL for both
-		Windows and Linux machines. This software will run
-		uninterrupted in the background while the device runs so that workflow can
-		proceed as normal. Once the software has targeted an application
-		that is communicating through specific SMTP ports, the process will be paused,
-		and the user will be notified of the potential threat.
-		Then, the user will be asked if this process should be added to a trusted
-		whitelist to continue running as normal or kill the process
-		immediately and be added to a blacklist so that any other time this process is
-		running it will be automatically terminated.
-	  </p>
-	  <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-		<button onclick="window.open('https://github.com/aelder202/E-Guard','_blank')">View on GitHub</button>
-	  </div>
-	</div>
-  </div>
-  
-  <!-- Modal for Virtual Labs -->
-  <div class="modal modal_multi" id="modal-virtual-labs">
-	<div class="modal-content">
-	  <span class="close close_multi">&times;</span>
-	  <h2 style="text-align: center;">Virtual Labs</h2>
-	  <p style="text-align: left; font-size: 15px; font-weight: bold;">
-		I began by completing and refining lab documents on various cybersecurity
-		topics,
-		including data anonymization, virtual switches and bridges, network
-		virtualization
-		with Open vSwitch and Linux Bridge, OpenFlow software, SDN controllers, Overlay
-		Network protocols,
-		Network Intrusion Detection Systems, system and network vulnerabilities (using
-		Nmap), TCP/IP security,
-		firewall configurations, and VPN basics.
-		<br>
-		After several weeks of debugging, I partnered with another Research Assistant to
-		rebuild these documents
-		using Sphinx. We converted .docx files to reStructuredText, using bash scripts
-		for efficiency. This
-		transformation provided a cohesive format with improved graphics and syntax.
-		<br>
-		Following the project's completion and peer review, we helped teach and present
-		these lab documents to students
-		during a week-long workshop. Acting as Teaching Assistants to the leading
-		professor, we supported participants
-		with understanding and applying the material.
-	  </p>
-	  <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-		<button onclick="window.open('https://taylorelder.com/sphinx_project/','_blank')" type="button">
-		  <i class="fas fa-eye fa-fw"></i> View Project
-		</button>
-		<button onclick="window.open('https://github.com/aelder202/sphinx_project','_blank')"
-		  type="button">
-		  <i class="fab fa-github fa-fw"></i> View on GitHub
-		</button>
-		<button class="open-modal-btn" data-modal="modal-sources">
-		  <i class="far fa-file-code"></i> Source Files
-		</button>
-		<button class="open-modal-btn" data-modal="modal-credit">
-		  <i class="fas fa-user-friends"></i> Credit
-		</button>
-	  </div>
-	</div>
-  </div>
-  
-  <!-- Modal for Secure Python Scripting -->
-  <div class="modal modal_multi" id="modal-secure-python">
-	<div class="modal-content">
-	  <span class="close close_multi">&times;</span>
-	  <h2 style="text-align: center;">Secure Python Scripting</h2>
-	  <h3 style="text-align: left;">Description</h3>
-	  <p style="text-align: left; font-size: 15px; font-weight: bold;">
-		The materials in this project were originally developed by Catalyzing Computing
-		and Cybersecurity in
-		Community Colleges (C5) project and contained PowerPoint presentations with
-		corresponding lab documents
-		that instructs beginner programmers how to write secure code and robust Python
-		code.
-		<br>
-		This project was created originally using Python 2 and specifically for Linux.
-		I, along with two other Research Assistants
-		were tasked with updating the PowerPoints, lab documents, and solutions to
-		Python 3 as well as creating both
-		Linux and Windows friendly versions.
-		<br>
-		Once our task was completed and our work had been peer reviewed, our updated
-		project was presented to a group of students,
-		with no prior coding experience, attending a university in California for a week
-		long workshop to get a peek inside the world of coding
-		and cyber security. Myself and the two other Research Assistants participated as
-		Teaching Assistants in this event, helping
-		students one on one and as a group to ensure if somebody was behind and needed
-		help or a further explanation of the lecture.
-	  </p>
-	  <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-	  <button onclick="window.open('https://github.com/nexus-lab/secure_scripting_python','_blank')" type="button">
-		<i class="fab fa-github fa-fw"></i> View on GitHub
-	  </button>
-	  <button class="open-modal-btn" data-modal="modal-secure-source">
-		<i class="far fa-file-code"></i> Source Files
-	  </button>
-	  <button class="open-modal-btn" data-modal="modal-secure-credit">
-		<i class="fas fa-user-friends"></i> Credit
-	  </button>
-	</div>
-	</div>
-  </div>
-  
-  <!-- Nested Modal: Source Files -->
-<div class="modal modal_multi nested-modal" id="modal-sources">
-	<div class="modal-content">
-	  <span class="close close_multi">&times;</span>
-	  <a href="images/linux_bridge.pdf" target="_blank">Linux Bridge Lab</a><br>
-	  <a href="https://github.com/seed-labs/seed-labs" target="_blank">SEED Labs</a>
-	</div>
-  </div>
-  
-  <div class="modal modal_multi nested-modal" id="modal-secure-source">
-	<div class="modal-content">
-	  <span class="close close_multi">x</span>
-	  <p>
-		The source files in this project are any files in the repository not
-		inside 'For Linux' or 'For Windows' directories.
-	  </p>
-	</div>
-  </div>
-  
-  <!-- Nested Modal: Credit -->
-  <div class="modal modal_multi nested-modal" id="modal-credit">
-	<div class="modal-content">
-	  <span class="close close_multi">&times;</span>
-	  <p><a href="https://github.com/aelder202" target="_blank"><strong>Taylor Elder</strong></a></p>
-	  <p><a href="https://github.com/matthewoneil0" target="_blank"><strong>Matthew O'Neil</strong></a></p>
-	</div>
-  </div>
-  
-  <div class="modal modal_multi nested-modal" id="modal-secure-credit">
-	<div class="modal-content">
-	  <span class="close close_multi">x</span>
-	  <p><a href="https://github.com/aelder202" target="_blank"><strong>Taylor Elder</strong></a></p>
-	  <p><a href="https://github.com/matthewoneil0" target="_blank"><strong>Matthew O'Neil</strong></a></p>
-	  <p><a href="https://github.com/jacobdoescode" target="_blank"><strong>Jacob McClain</strong></a></p>
-	</div>
-  </div>
-  
-  
+
+		<!-- Nested Modal: Source Files -->
+		<div class="modal modal_multi nested-modal" id="modal-sources">
+			<div class="modal-content">
+				<span class="close close_multi">&times;</span>
+				<a href="images/linux_bridge.pdf" target="_blank">Linux Bridge Lab</a><br>
+				<a href="https://github.com/seed-labs/seed-labs" target="_blank">SEED Labs</a>
+			</div>
+		</div>
+
+		<div class="modal modal_multi nested-modal" id="modal-secure-source">
+			<div class="modal-content">
+				<span class="close close_multi">x</span>
+				<p>
+					The source files in this project are any files in the repository not
+					inside 'For Linux' or 'For Windows' directories.
+				</p>
+			</div>
+		</div>
+
+		<!-- Nested Modal: Credit -->
+		<div class="modal modal_multi nested-modal" id="modal-credit">
+			<div class="modal-content">
+				<span class="close close_multi">&times;</span>
+				<p><a href="https://github.com/aelder202" target="_blank"><strong>Taylor Elder</strong></a></p>
+				<p><a href="https://github.com/matthewoneil0" target="_blank"><strong>Matthew O'Neil</strong></a></p>
+			</div>
+		</div>
+
+		<div class="modal modal_multi nested-modal" id="modal-secure-credit">
+			<div class="modal-content">
+				<span class="close close_multi">x</span>
+				<p><a href="https://github.com/aelder202" target="_blank"><strong>Taylor Elder</strong></a></p>
+				<p><a href="https://github.com/matthewoneil0" target="_blank"><strong>Matthew O'Neil</strong></a></p>
+				<p><a href="https://github.com/jacobdoescode" target="_blank"><strong>Jacob McClain</strong></a></p>
+			</div>
+		</div>
+
+
 
 
 		<!-- About Me -->
@@ -483,6 +485,8 @@
 				<div class="a myLink">
 					<a href="https://github.com/aelder202" target="_blank" class="myLink"><i
 							class="fab fa-github fa-3x fa-fw"></i></a>
+					<a href="https://app.hackthebox.com/profile/2048041" target="_blank" class="myLink"><i
+					class="fas fa-cube fa-3x fa-fw"></i></a>
 					<a href="https://www.linkedin.com/in/taylor-elder/" target="_blank" class="myLink"><i
 							class="fab fa-linkedin fa-3x fa-fw"></i></a>
 					<a href="mailto:contact@taylorelder.com" class="myLink"><i
