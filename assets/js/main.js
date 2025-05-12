@@ -19,15 +19,15 @@
 	// Typewriter effect for the phrases
 	// This function will create a typewriter effect for the phrases in the array
 	const phrases = [
-		"OSCP+ Certified",                    
-		"Penetration Tester",                
-		"Application Security Specialist",   
-		"Adversary Emulation Specialist",    
-		"Red Team Operator",                 
-		"Vulnerability Assessment Expert",
-		"Cybersecurity Engineer",
-		"CTF Competitor", 
+		"OSCP+ Certified",
+		"Penetration Tester",
+		"AppSec Specialist",
+		"Red Team Operator",
+		"Adversary Emulation",
+		"Hands-on Exploitation",
+		"SAST/DAST Validation"
 	];
+
 
 	const element = document.getElementById("typewriter");
 	const typingSpeed = 100;

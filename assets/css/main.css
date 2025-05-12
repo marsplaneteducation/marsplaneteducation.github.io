@@ -262,7 +262,7 @@ input::-moz-focus-inner {
 	-webkit-backdrop-filter: blur(10px);
 	padding: 2rem;
 	border-radius: 15px;
-	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	box-shadow: 0 0 40px rgba(0,0,0,0.4);
 	max-width: 600px;
 	margin: auto;
 	color: white;
